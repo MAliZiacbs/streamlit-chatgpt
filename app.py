@@ -8,7 +8,7 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 client = openai.OpenAI()
 
 # Streamlit UI setup
-st.set_page_config(page_title="ChatGPT-4 Streamlit App", layout="centered")
+st.set_page_config(page_title="CC BI Days Assistant", layout="centered")
 
 st.title("💬 ChatGPT-4 with Streamlit")
 st.markdown("Ask any question and get an AI-generated response.")
