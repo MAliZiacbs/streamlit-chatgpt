@@ -1,9 +1,11 @@
 import streamlit as st
 import openai
-import os
 
 # Load API key from Streamlit secrets
 openai.api_key = st.secrets["OPENAI_API_KEY"]
+
+# Create an OpenAI client
+client = openai.OpenAI()
 
 # Streamlit UI setup
 st.set_page_config(page_title="ChatGPT-4 Streamlit App", layout="centered")
@@ -28,13 +30,13 @@ if prompt := st.chat_input("Type your question here..."):
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # Call OpenAI API
-    response = openai.ChatCompletion.create(
+    # Call OpenAI API with the new syntax
+    response = client.chat.completions.create(
         model="gpt-4",
         messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages]
     )
 
-    reply = response["choices"][0]["message"]["content"]
+    reply = response.choices[0].message.content  # New way to access response
 
     # Add assistant's response to chat history
     st.session_state.messages.append({"role": "assistant", "content": reply})
