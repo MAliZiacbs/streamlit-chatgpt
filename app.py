@@ -8,25 +8,6 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 client = openai.OpenAI()
 
 
-st.markdown(
-    """
-    <style>
-        body {
-            background-color: #FFA500; /* Orange */
-        }
-        .stApp {
-            background-color: #FFA500;
-        }
-        .stChatMessage {
-            border-radius: 10px;
-            padding: 10px;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
 # Streamlit UI setup
 st.set_page_config(page_title="CC BI Days Assistant", layout="centered")
 
