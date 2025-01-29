@@ -32,7 +32,7 @@ if prompt := st.chat_input("Type your question here..."):
 
     # Call OpenAI API with the new syntax
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages]
     )
 
