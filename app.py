@@ -7,10 +7,34 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 # Create an OpenAI client
 client = openai.OpenAI()
 
-
 # Streamlit UI setup
-st.set_page_config(page_title="CC BI Days Assistant", layout="centered")
+st.set_page_config(page_title="CC BI Days Assistant", layout="wide")
 
+# Sidebar with additional information
+with st.sidebar:
+    st.header("📌 CC BI Days Assistant")
+    st.markdown("🤖 **Your AI-powered assistant for CC BI Days.**")
+    st.markdown("💡 Ask questions about BI, data insights, and analytics.")
+    
+    st.divider()
+
+    st.subheader("🔗 Useful Links")
+    st.markdown("[📘 OpenAI Docs](https://platform.openai.com/docs/)")
+    st.markdown("[💬 Streamlit Docs](https://docs.streamlit.io/)")
+    st.markdown("[🌐 Company Website](https://www.camelot-mc.com/)")
+
+    st.divider()
+
+    st.subheader("📞 Contact")
+    st.markdown("👤 **Your Name**")
+    st.markdown("✉️ [your.email@example.com](mailto:your.email@example.com)")
+    st.markdown("📍 Location: Kehl, Germany")
+
+    st.divider()
+
+    st.markdown("🛠️ Developed by **Muhammad Ali Zia** 🚀")
+
+# Main title
 st.title("💬 CC BI Days Assistant")
 st.markdown("Ask any question and get an AI-generated response.")
 
