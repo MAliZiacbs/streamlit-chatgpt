@@ -7,10 +7,30 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 # Create an OpenAI client
 client = openai.OpenAI()
 
+
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #FFA500; /* Orange */
+        }
+        .stApp {
+            background-color: #FFA500;
+        }
+        .stChatMessage {
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # Streamlit UI setup
 st.set_page_config(page_title="CC BI Days Assistant", layout="centered")
 
-st.title("💬 ChatGPT-4 with Streamlit")
+st.title("💬 CC BI Days Assistant")
 st.markdown("Ask any question and get an AI-generated response.")
 
 # Store chat history
