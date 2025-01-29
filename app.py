@@ -21,18 +21,7 @@ with st.sidebar:
     st.subheader("🔗 Useful Links")
     st.markdown("[📘 OpenAI Docs](https://platform.openai.com/docs/)")
     st.markdown("[💬 Streamlit Docs](https://docs.streamlit.io/)")
-    st.markdown("[🌐 Company Website](https://www.camelot-mc.com/)")
-
-    st.divider()
-
-    st.subheader("📞 Contact")
-    st.markdown("👤 **Your Name**")
-    st.markdown("✉️ [your.email@example.com](mailto:your.email@example.com)")
-    st.markdown("📍 Location: Kehl, Germany")
-
-    st.divider()
-
-    st.markdown("🛠️ Developed by **Muhammad Ali Zia** 🚀")
+    st.markdown("[🌐 Company Website](https://www.cbs-consulting.com/en/)")
 
 # Main title
 st.title("💬 CC BI Days Assistant")
